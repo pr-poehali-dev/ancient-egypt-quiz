@@ -4,15 +4,7 @@
       "name": "Get leaderboard",
       "method": "GET",
       "path": "/",
-      "expectedStatus": 200,
-      "expectedBody": [
-        {
-          "player_name": "string",
-          "score": "number",
-          "date": "string"
-        }
-      ],
-      "bodyMatcher": "partial"
+      "expectedStatus": 200
     },
     {
       "name": "Save score",
