@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Get leaderboard",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": [
+        {
+          "player_name": "string",
+          "score": "number",
+          "date": "string"
+        }
+      ],
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Save score",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Test Player",
+        "score": 85
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "player_name": "Test Player",
+        "score": 85,
+        "date": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
